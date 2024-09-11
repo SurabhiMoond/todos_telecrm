@@ -1,0 +1,160 @@
+.logoDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  display: flex;
+  gap: 5px;
+}
+.imgLogo{
+  width: 100%;
+}
+.cardDiv {
+  height: 180px;
+  min-width: 200px;
+  box-shadow: rgba(255, 136, 86, 0.5) 0px 30px 60px -12px inset, rgba(255, 136, 86, 0.5) 0px 18px 36px -18px inset;
+  min-height: 150px;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: justify;
+  transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.cardDiv:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.statusDiv{
+display:flex;
+}
+span :hover{
+  color: #FF8856;
+}
+.footer{
+display: flex;
+gap: 10px;
+border-top:1px solid #FF8856;
+}
+.dateDiv{
+display:flex; 
+align-items:center; 
+justify-content:center;
+}
+.section{
+  height: 70vh;
+  width: 100%;
+}
+.input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 18px;
+  border: 2px solid #FF8856;
+  border-radius: 5px;
+  outline: none;
+  color: #FF8856;
+}
+
+.input:focus {
+  border-color: #FF8856;
+  box-shadow: 0 0 5px rgba(255, 136, 86, 0.5);
+}
+
+.formData {
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.card{
+padding: 20px;
+height: 50vh; 
+min-width: 250px;  
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 40px;
+overflow-y: scroll;
+}
+.statusDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+.btnED{
+  display:flex;
+  gap: 15px;
+}
+.show{
+  display: block;
+}
+.showPls{
+  display: none;
+}
+button {
+  background-color: #FF8856;
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2f2927;
+  border:1px solid #FF8856;
+}
+@media (max-width:448px){
+  .input{
+    width: 50%;
+  }
+  .show{
+    display: none;
+  }
+  .showPls{
+    display: block;
+  }
+  .logoDiv{
+    display: block;
+  }
+  .imgLogo{
+  width: 20%;
+}
+.dateDiv{
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.hide{
+  display: none;
+}
+.card{
+  grid-template-columns: repeat(1, 1fr);
+  overflow-y: scroll;
+  height: 50vh;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+.cardDiv{
+  margin-left: 30px;
+  width: 270px;
+}
+.statusBtn{
+  padding: 5px;
+  font-size: small;
+}
+.btnED{
+  gap: 2px;
+}
+}
+
+
+
