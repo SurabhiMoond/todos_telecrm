@@ -95,29 +95,31 @@ export const Todo = () => {
         <div className={style.card}>
           {formData.map((item, index) => (
             <div key={index} className={style.cardDiv}>
-              <div className={style.statusDiv}>
-              <div className={style.statusBtn}>
-                  Status &nbsp;
-              <select value={item.status} onChange={(e) => handleStatusChange(index, e.target.value)}
-              style={{ backgroundColor: item.status === "Pending"? "#FF6A6A" : item.status === "Progress"? "#C27DE8" : "#3BAC2C", cursor: "pointer",
-                      padding:'5px',
-                      border:'none',
-                    }}>
-              <option value="Pending" style={{ backgroundColor: "#FF6A6A" }} > Pending </option>
-              <option value="Progress" style={{ backgroundColor: "#C27DE8" }} > In Progress </option>
-              <option value="Complete" style={{ backgroundColor: "#3BAC2C" }} > Complete </option>
-              </select>
-              </div>
-                <div className={style.btnED}>
-                  <span onClick={() => handleEditToggle(index)} style={{ cursor: "pointer" }}>
-                    {item.isEditing ? <AiOutlineSave size={'25px'} /> : <FiEdit size={'25px'}/>}
-                  </span>
-                  <span onClick={() => handleDelete(index)} style={{ cursor: "pointer" }} >
-                    <RiDeleteBin2Line size={'25px'} />
-                  </span>
+              <div className={style.statusMain}>
+                <div className={style.statusDiv}>
+                <div className={style.statusBtn}>
+                    Status &nbsp;
+                <select value={item.status} onChange={(e) => handleStatusChange(index, e.target.value)}
+                style={{ backgroundColor: item.status === "Pending"? "#FF6A6A" : item.status === "Progress"? "#C27DE8" : "#3BAC2C", cursor: "pointer",
+                        padding:'5px',
+                        border:'none',
+                      }}>
+                <option value="Pending" style={{ backgroundColor: "#FF6A6A" }} > Pending </option>
+                <option value="Progress" style={{ backgroundColor: "#C27DE8" }} > In Progress </option>
+                <option value="Complete" style={{ backgroundColor: "#3BAC2C" }} > Complete </option>
+                </select>
                 </div>
+                  <div className={style.btnED}>
+                    <span onClick={() => handleEditToggle(index)} style={{ cursor: "pointer" }}>
+                      {item.isEditing ? <AiOutlineSave size={'25px'} /> : <FiEdit size={'25px'}/>}
+                    </span>
+                    <span onClick={() => handleDelete(index)} style={{ cursor: "pointer" }} >
+                      <RiDeleteBin2Line size={'25px'} />
+                    </span>
+                  </div>
+                </div>
+                <hr color="#FF8856" />
               </div>
-              <hr color="#FF8856" />
               {item.isEditing ? (<input type="text" value={item.task} onChange={(e) => handleTaskChange(index, e.target.value)}/>) :
                (<span>{item.task}</span>)}
             </div>
