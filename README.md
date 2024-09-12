@@ -7,9 +7,10 @@ This is a simple, responsive Todo application built with React. It allows users 
 
 ### Screenshots
 <div align="center" style="display: flex; justify-content: center; gap: 10px;">
-  <img src="https://github.com/user-attachments/assets/1daf85ff-e4d7-4898-a083-180977229589" alt="Desktop View" width="85%" />
-  <img src="image-1.png" alt="Mobile View" width="45%" />
+  <img src="https://github.com/user-attachments/assets/2c7d2d30-505a-404e-afed-baceaf38e53c" alt="Desktop View" width="45%" />
+  <img src="image-1.png" alt="Mobile View" width="25%" height="400px" />
 </div>
+
 
 
 ### Features
